@@ -1,0 +1,43 @@
+{
+  "name": "htmx-deez-express",
+  "version": "0.0.1",
+  "description": "Htmx & Express",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "tailwind:css": "npx tailwindcss -i public/styles/tailwind.css  -o public/styles/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlviDervishaj/htmx-deez-express.git"
+  },
+  "keywords": [
+    "htmx",
+    "express"
+  ],
+  "author": "Alvi Dervishaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlviDervishaj/htmx-deez-express/issues"
+  },
+  "homepage": "https://github.com/AlviDervishaj/htmx-deez-express#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "htmx": "^0.0.2",
+    "node-fetch": "^3.3.2",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.1.6",
+    "tailwindcss": "^3.3.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

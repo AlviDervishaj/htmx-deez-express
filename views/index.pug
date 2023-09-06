@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(href="./styles/style.css", rel="stylesheet")
+    title HTMX DEEZ NUTS  
+    include includes/new-recommendation
+    button.px-4.py-4.mx-auto#loadMore(
+      hx-target="#newSongRecommendation" 
+      hx-trigger="click" 
+      hx-indicator="#loading"
+      hx-post="/api/recommend-songs"
+      hx-include="[name='id']"
+      hx-swap="afterbegin"
+    ) Load more
+    ul.grid.place-items-center.grid-cols-3.w-full.h-full.mx-auto#newSongRecommendation
+  body
+    script(src="https://unpkg.com/htmx.org@1.3.1")
+    script(src="https://unpkg.com/hyperscript.org@0.0.5")
+    script(src="https://unpkg.com/htmx.org/dist/ext/loading-states.js")

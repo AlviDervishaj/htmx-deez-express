@@ -1,0 +1,10 @@
+form
+  button.px-3.py-2.bg-slate-800.rounded-md.hover_bg-sky-900.transition-colors.duration-500.my-6.ease-in-out(
+    hx-post="/api/recommend-songs" 
+    hx-target="#newSongRecommendation" 
+    hx-trigger="click" 
+    hx-swap="afterbegin"
+    hx-indicator="#loading"
+    ) Get recommendations
+#loading.htmx-indicator Getting new Recommendation ...
+
