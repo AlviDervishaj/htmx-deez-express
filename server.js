@@ -35,7 +35,7 @@ app.post("/api/recommend-songs", async (req, res) => {
     result.song_recommendations.recommendations.forEach((prop) => {
       const temp = prop.recommended_song;
       const obj = {
-        title: temp.full_title,
+        title: temp.title,
         title_featured: temp.title_with_featured,
         thumbnail: temp.song_art_image_thumbnail_url,
         release_date: temp.release_date_for_display,

@@ -4,16 +4,14 @@
 
 @layer utilities {
   .htmx-indicator {
-    @apply opacity-0 transition-opacity duration-500 ease-in absolutew-40 h-40 border-slate-200 border top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply duration-500 ease-in absolute backdrop-blur-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
-  .htmx-request .htmx-indicator{
-    @apply opacity-100;
+  .song-height {
+    max-height: 60rem;
   }
-  .htmx-request.htmx-indicator{
-    @apply opacity-100;
-  }
-  .loadMore {
-    @apply px-2 py-1 absolute bottom-0 right-0 m-2 rounded-lg;
-  }
+}
 
+
+#app {
+  background-color: #191724;
 }

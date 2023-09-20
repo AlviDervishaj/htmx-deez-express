@@ -1,10 +1,21 @@
-form
-  button.px-3.py-2.bg-slate-800.rounded-md.hover_bg-sky-900.transition-colors.duration-500.my-6.ease-in-out(
+form.w-full.h-fit.flex.flex-col.items-center.content-center.justify-center
+  button.px-3.py-2.mx-auto.rounded-md.hover_bg-sky-300.sm_block.hidden.transition-colors.duration-500.my-6.ease-in-out(
+    style="background-color: #c4a7e7;color: #1f1d2e;font-weight: 600;letter-spacing: 0.02em"
     hx-post="/api/recommend-songs" 
     hx-target="#newSongRecommendation" 
     hx-trigger="click" 
+    hx-include="[name='id']"
     hx-swap="afterbegin"
     hx-indicator="#loading"
     ) Get recommendations
-#loading.htmx-indicator Getting new Recommendation ...
-
+  #loading.htmx-indicator.text-slate-200.pointer-events-none.w-screen.h-screen.flex.items-center.content-center.justify-center.text-xl Getting new Recommendation ...
+button.sm_hidden.fixed.bottom-4.right-4.w-12.h-12.rounded-full(
+  style="background-color: #21202e; color: #e0def4; filter: drop-shadow(0 0px 11px rgb(246 193 119 / 0.3))"
+  hx-post="/api/recommend-songs" 
+  hx-target="#newSongRecommendation" 
+  hx-trigger="click" 
+  hx-include="[name='id']"
+  hx-swap="afterbegin"
+  hx-indicator="#loading"
+)
+  i.fi.fi-ss-sparkles.w-full.h-full.relative
